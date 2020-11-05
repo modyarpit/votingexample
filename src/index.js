@@ -10,6 +10,8 @@ import Card from './Card';
 import Shirt from './Shirt';
 import LightningCounterDisplay from './LightningCounter';
 import Circle from './Circle';
+import CounterParent from './Counter'
+import LifeCycle from './LifeCycle';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -33,7 +35,7 @@ for (var i = 0; i < colors.length; i++) {
 }
 
 ReactDOM.render(
-  // <React.StrictMode>
+  //<React.StrictMode>
   <>
     <Demo />
     <Distance speed="50" time="50" />
@@ -50,13 +52,15 @@ ReactDOM.render(
     <Card color="#FFA737" /><br/>
     <Card color="#CCA737" />
     <Shirt color="Steelblue" num="3.14" size="medium" />
-    <LightningCounterDisplay counter="50" />
+    <LightningCounterDisplay counter="50" /> 
     {/*{showCircle()}
     {showCircle()}
     {showCircle()} */}
     {renderData}
+    <CounterParent display="Arpit" />
+    <LifeCycle />
   </>
-  // </React.StrictMode>
+  //</React.StrictMode>
   ,
   document.getElementById('root')
 );
